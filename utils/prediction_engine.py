@@ -22,7 +22,7 @@ import joblib
 import warnings
 import numpy as np
 import pandas as pd
-
+from tensorflow.keras.models import load_model
 from datetime import datetime
 
 from tensorflow.keras.models import load_model
@@ -72,10 +72,7 @@ XGB_MODEL_PATH = os.path.join(
 # Deep Learning Models
 # ==========================================================
 
-ANN_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "ANN.keras"
-)
+ann_model = load_model("models/ANN_Model.h5", compile=False)
 
 LSTM_MODEL_PATH = os.path.join(
     MODEL_DIR,
