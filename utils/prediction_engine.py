@@ -71,8 +71,10 @@ XGB_MODEL_PATH = os.path.join(
 # ==========================================================
 # Deep Learning Models
 # ==========================================================
-
-ann_model = load_model("models/ANN_Model.h5", compile=False)
+ANN_MODEL_PATH = os.path.join(
+    MODEL_DIR,
+    "ANN_Model.h5"
+)
 
 LSTM_MODEL_PATH = os.path.join(
     MODEL_DIR,
@@ -88,8 +90,6 @@ BILSTM_MODEL_PATH = os.path.join(
     MODEL_DIR,
     "BiLSTM.keras"
 )
-
-
 # ==========================================================
 # Scaler
 # ==========================================================
@@ -155,9 +155,7 @@ def load_dl_model(path):
     if not os.path.exists(path):
         raise FileNotFoundError(path)
 
-    return load_model(path)
-
-
+    return load_model(path, compile=False)
 # ==========================================================
 # Load All Models
 # ==========================================================
@@ -659,7 +657,7 @@ if __name__ == "__main__":
 
     today = datetime.today()
 
-    result = predict_linear(today, 1)
+    result = predict_linear_regression(today,1)
 
     print("Linear Regression Prediction")
 
