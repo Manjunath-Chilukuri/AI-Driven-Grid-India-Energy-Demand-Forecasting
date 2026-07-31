@@ -14,7 +14,7 @@ import streamlit as st
 # Dataset Path
 # -------------------------------------------------------
 
-DATA_PATH = "data/data.xlsx"
+DATA_PATH = "data.xlsx"
 
 
 # -------------------------------------------------------
