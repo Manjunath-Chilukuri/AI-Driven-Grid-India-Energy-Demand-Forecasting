@@ -24,9 +24,6 @@ import numpy as np
 import pandas as pd
 from tensorflow.keras.models import load_model
 from datetime import datetime
-
-from tensorflow.keras.models import load_model
-
 warnings.filterwarnings("ignore")
 
 
