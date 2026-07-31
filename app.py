@@ -1,6 +1,15 @@
 import streamlit as st
 from PIL import Image
 
+import sklearn
+import numpy
+import joblib
+import streamlit as st
+
+st.write("scikit-learn:", sklearn.__version__)
+st.write("numpy:", numpy.__version__)
+st.write("joblib:", joblib.__version__)
+
 # --------------------------------------------------
 # PAGE CONFIGURATION
 # --------------------------------------------------
