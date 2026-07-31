@@ -35,10 +35,11 @@ warnings.filterwarnings("ignore")
 # ==========================================================
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
-MODEL_DIR = os.path.join(PROJECT_DIR, "models")
-DATA_DIR = os.path.join(PROJECT_DIR, "data")
+MODEL_DIR = CURRENT_DIR
+DATA_DIR = CURRENT_DIR
+
+DATASET_PATH = os.path.join(CURRENT_DIR, "data.xlsx")
 
 
 # ==========================================================
