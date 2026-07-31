@@ -59,18 +59,14 @@ np.random.seed(42)
 tf.random.set_seed(42)
 
 # ==========================================================
-# Project Directories
+# Project Paths
 # ==========================================================
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
-DATA_DIR = os.path.join(PROJECT_DIR, "data")
-MODEL_DIR = os.path.join(PROJECT_DIR, "models")
-OUTPUT_DIR = os.path.join(PROJECT_DIR, "outputs")
+OUTPUT_DIR = os.path.join(CURRENT_DIR, "outputs")
 REPORT_DIR = os.path.join(OUTPUT_DIR, "reports")
 
-os.makedirs(MODEL_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 os.makedirs(REPORT_DIR, exist_ok=True)
 
@@ -78,63 +74,28 @@ os.makedirs(REPORT_DIR, exist_ok=True)
 # Dataset Path
 # ==========================================================
 
-DATA_PATH = os.path.join(
-    DATA_DIR,
-    "data.xlsx"
-)
-
-# ==========================================================
-# Output Report
-# ==========================================================
-
-REPORT_PATH = os.path.join(
-    REPORT_DIR,
-    "Model_Performance.csv"
-)
+DATA_PATH = os.path.join(CURRENT_DIR, "data.xlsx")
 
 # ==========================================================
 # Model Paths
 # ==========================================================
 
-LINEAR_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "LinearRegression.pkl"
-)
+LINEAR_MODEL_PATH = os.path.join(CURRENT_DIR, "LinearRegression.pkl")
+RF_MODEL_PATH = os.path.join(CURRENT_DIR, "RandomForest.pkl")
+XGB_MODEL_PATH = os.path.join(CURRENT_DIR, "XGBoost.pkl")
 
-RF_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "RandomForest.pkl"
-)
+ANN_MODEL_PATH = os.path.join(CURRENT_DIR, "ANN.keras")
+LSTM_MODEL_PATH = os.path.join(CURRENT_DIR, "LSTM.keras")
+GRU_MODEL_PATH = os.path.join(CURRENT_DIR, "GRU.keras")
+BILSTM_MODEL_PATH = os.path.join(CURRENT_DIR, "BiLSTM.keras")
 
-XGB_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "XGBoost.pkl"
-)
+SCALER_PATH = os.path.join(CURRENT_DIR, "scaler.pkl")
 
-ANN_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "ANN.keras"
-)
+# ==========================================================
+# Output Report
+# ==========================================================
 
-LSTM_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "LSTM.keras"
-)
-
-GRU_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "GRU.keras"
-)
-
-BILSTM_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "BiLSTM.keras"
-)
-
-SCALER_PATH = os.path.join(
-    MODEL_DIR,
-    "scaler.pkl"
-)
+REPORT_PATH = os.path.join(REPORT_DIR, "Model_Performance.csv")
 # ==========================================================
 # ML Features
 # ==========================================================
