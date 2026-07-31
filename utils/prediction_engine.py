@@ -75,17 +75,17 @@ ANN_MODEL_PATH = os.path.join(
 
 LSTM_MODEL_PATH = os.path.join(
     MODEL_DIR,
-    "Best_LSTM_Model.keras"
+    "Best_LSTM_Model.h5"
 )
 
 GRU_MODEL_PATH = os.path.join(
     MODEL_DIR,
-    "Best_GRU_Model.keras"
+    "Best_GRU_Model.h5"
 )
 
 BILSTM_MODEL_PATH = os.path.join(
     MODEL_DIR,
-    "Best_BiLSTM_Model.keras"
+    "Best_BiLSTM_Model.h5"
 )
 # ==========================================================
 # Scaler
