@@ -53,56 +53,24 @@ DATASET_PATH = os.path.join(DATA_DIR, "data.xlsx")
 # Classical ML Models
 # ==========================================================
 
-LINEAR_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "LinearRegression.pkl"
-)
-
-RF_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "RandomForest.pkl"
-)
-
-XGB_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "XGBoost.pkl"
-)
-
+LINEAR_MODEL_PATH = os.path.join(CURRENT_DIR, "LinearRegression.pkl")
+RF_MODEL_PATH = os.path.join(CURRENT_DIR, "RandomForest.pkl")
+XGB_MODEL_PATH = os.path.join(CURRENT_DIR, "XGBoost.pkl")
 
 # ==========================================================
 # Deep Learning Models
 # ==========================================================
 
-ANN_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "ANN.keras"
-)
-
-LSTM_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "LSTM.keras"
-)
-
-GRU_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "GRU.keras"
-)
-
-BILSTM_MODEL_PATH = os.path.join(
-    MODEL_DIR,
-    "BiLSTM.keras"
-)
-
+ANN_MODEL_PATH = os.path.join(CURRENT_DIR, "ANN.keras")
+LSTM_MODEL_PATH = os.path.join(CURRENT_DIR, "LSTM.keras")
+GRU_MODEL_PATH = os.path.join(CURRENT_DIR, "GRU.keras")
+BILSTM_MODEL_PATH = os.path.join(CURRENT_DIR, "BiLSTM.keras")
 
 # ==========================================================
 # Scaler
 # ==========================================================
 
-SCALER_PATH = os.path.join(
-    MODEL_DIR,
-    "scaler.pkl"
-)
-
+SCALER_PATH = os.path.join(CURRENT_DIR, "scaler.pkl")
 
 # ==========================================================
 # Feature Lists
@@ -663,9 +631,7 @@ if __name__ == "__main__":
 
     today = datetime.today()
 
-    result = predict_linear(today, 1)
-
-    print("Linear Regression Prediction")
+    result = predict_linear_regression(today, 1)
 
     print(result)
 # ==========================================================
